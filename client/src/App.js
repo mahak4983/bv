@@ -9,8 +9,8 @@ function App() {
       <Router>
 
       <Routes>
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/register" element={<Register />} />
+          <Route exact path="https://nervous-pear-pumps.cyclic.app/login" element={<Login />} />
+          <Route exact path="https://nervous-pear-pumps.cyclic.app/register" element={<Register />} />
 
       </Routes>
       </Router>

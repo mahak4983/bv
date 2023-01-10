@@ -15,7 +15,7 @@ const Register = () => {
         e.preventDefault();
 
 
-        axios('/api/v1/user/register', {
+        axios('https://nervous-pear-pumps.cyclic.app/api/v1/user/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
