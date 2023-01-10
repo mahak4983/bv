@@ -5,13 +5,15 @@ import Register from './components/Register';
 function App() {
   return (
     <div className="App">
-      hello
+      Visit /login to go to Login form
+      <br />
+      Visit /register to go to Registratin Form
+      <br/>
       <Router>
 
       <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
       </Routes>
       </Router>
     </div>

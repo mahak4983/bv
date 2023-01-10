@@ -29,7 +29,6 @@ router.post('/register', async (req, res) => {
     const {
         email, name, password, address
     } = req.body;
-    //console.log("hello")
     try {
         // check the password field before hashing
         if (!passwordValidator.validator(password)) {
@@ -48,8 +47,13 @@ router.post('/register', async (req, res) => {
             password: hashedPassword,
             address
         };
-
-       
+        const alreadyExist = await User.findOne({ email }); 
+        //throw error if email already exists
+        if (alreadyExist) {
+            
+            res.status(400).send("email already exists")
+            return
+        }
 
         const newUser = new User(userData);
         // validate the parameters

@@ -15,17 +15,14 @@ const Register = () => {
         e.preventDefault();
 
 
-        axios('https://nervous-pear-pumps.cyclic.app/api/v1/user/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
+        axios
+        .post('https://nervous-pear-pumps.cyclic.app/api/v1/user/register', {
+           
+
                 name:name,
                 email: email,
                 password: password,
                 address:address
-            })
         })
             .then(res => { })
             .catch(err => { });
