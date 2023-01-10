@@ -7,7 +7,7 @@ const passwordValidator = require('../validation/password');
 const emailIdValidator = require('../validation/email');
 
 const SALT_ROUNDS = 12; 
-const { JWT_SECRET } = require('../config/keys')
+const JWT_SECRET  = process.env.JWT_SECRET
 
 /**
  * @route /user/register
