@@ -5,7 +5,7 @@ require("dotenv").config();
 const path = require("path");
 
 const user = require('./routes/user');
-const {MONGOURI} = process.env.MONGOURI
+const MONGOURI = process.env.MONGOURI
 
 const PORT = process.env.PORT || 8080
 const app = express();
